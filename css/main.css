@@ -106,7 +106,24 @@ a {
   color: #999;
 }
 .preview .bubble {
-  background: fff;
+  background: #fff;
+}
+
+.preview.self {
+  flex-direction: row-reverse;
+}
+.preview.self .preview_column .preview_pic {
+  background-color: #9f6bff;
+  margin-right: 0;
+  margin-left: 16px;
+}
+.preview.self .preview_column .preview_nick {
+  width: 50vw;
+  font-size: 0.9em;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bubble {
@@ -129,6 +146,18 @@ a {
   left: -10px;
   border-bottom: 10px solid transparent;
   border-right: 10px solid black;
+}
+
+.self .bubble {
+  background: #ffa;
+  text-align: right;
+}
+.self .bubble::before {
+  right: -10px;
+  left: auto;
+  border: none;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid black;
 }
 
 .login_container {
@@ -260,6 +289,17 @@ a.preview_wrap .preview:hover {
   display: flex;
   align-items: self-end;
   padding-left: 10px;
+}
+
+.self .bubble_wrap {
+  flex-direction: row-reverse;
+}
+.self .bubble_wrap .bubble_content .preview_nick {
+  text-align: right;
+}
+.self .bubble_wrap .bubble_time {
+  padding: 0;
+  padding-right: 10px;
 }
 
 .chat_form {

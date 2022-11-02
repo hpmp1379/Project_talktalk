@@ -37,9 +37,30 @@
         }
     }
         .bubble {
-            background: fff;
+            background: #fff;
         }
 }
+// Self chat
+.preview.self{
+    flex-direction: row-reverse;
+    
+    .preview_column{
+        .preview_pic {
+            background-color: $chat-pic;
+            margin-right: 0;
+            margin-left: 16px;
+        }
+        .preview_nick {
+            width: 50vw;
+            font-size: 0.9em;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
 .bubble {
     @include set-box(auto, 100%, 4px);
     position: relative;
@@ -55,5 +76,18 @@
         top: 10px; left: -10px;
         border-bottom: 10px solid transparent;
         border-right: 10px solid black;
+    }
+}
+// self chat bubble
+
+.self .bubble {
+    background: $chat-self;
+    text-align: right;
+
+    &::before {
+        right: -10px; left: auto;
+        border: none;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid black;
     }
 }

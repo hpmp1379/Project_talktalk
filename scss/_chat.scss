@@ -38,6 +38,15 @@
         padding-left: 10px;
     }
 }
+.self .bubble_wrap {
+    flex-direction: row-reverse;
+
+    .bubble_content {
+        .preview_nick {text-align: right;}
+    }
+    .bubble_time {padding: 0; padding-right: 10px;}
+}
+
 
 .chat_form {
     background: #fff;
